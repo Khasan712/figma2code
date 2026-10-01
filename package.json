@@ -1,0 +1,33 @@
+{
+  "name": "figma2code",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Figma frames to verified React + TypeScript pages with one command: a Claude Code skill backed by a deterministic compiler and a pixel/geometry verifier",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "extract": "node --experimental-strip-types src/cli.ts",
+    "digest": "node --experimental-strip-types src/digest-cli.ts",
+    "compare": "node --experimental-strip-types src/compare-cli.ts",
+    "optimize": "node --experimental-strip-types src/optimize-cli.ts",
+    "genpage": "node --experimental-strip-types src/genpage-cli.ts",
+    "compare:selftest": "node --experimental-strip-types tests/selftest/run.ts",
+    "test": "node --experimental-strip-types --test tests/**/*.test.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "bench": "node --experimental-strip-types src/bench-cli.ts",
+    "build-page": "node --experimental-strip-types src/build-cli.ts",
+    "frames": "node --experimental-strip-types src/frames-cli.ts"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "@types/pngjs": "^6.0.5",
+    "pixelmatch": "^7.2.0",
+    "playwright": "^1.62.1",
+    "pngjs": "^7.0.0",
+    "sharp": "^0.35.3",
+    "typescript": "^7.0.2"
+  }
+}
