@@ -35,6 +35,8 @@ npx playwright install chromium
 cp .env.example .env   # then set FIGMA_ACCESS_TOKEN in .env
 ```
 
+To get a token in Figma, open **Settings → Security → Personal access tokens → Generate new token** and give it the **File content: Read-only** scope. Put it in `.env`; that file is git-ignored, so the token never leaves your machine.
+
 To use the skill from any project, link it into your Claude Code skills and tell it where figma2code lives:
 
 ```bash
